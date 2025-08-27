@@ -10,6 +10,32 @@ tags:
 title: 记录
 ---
 
+# zt重置设备ID
+
+在 ZeroTier 中，如果你通过克隆 VM 或复制系统镜像导致 设备 ID（Node ID）重复，需要重置设备 ID。ZeroTier 的设备 ID 是基于本机生成的私钥，无法在软件内直接修改，但可以通过以下方法重置：
+
+方法 1：在 Linux / Debian 上重置
+
+停止 ZeroTier 服务：
+
+```shell
+sudo systemctl stop zerotier-one
+```
+
+删除本地身份文件（Node ID）：
+
+```shell
+sudo rm -rf /var/lib/zerotier-one/identity.*
+```
+
+注意：identity.* 文件包含你的 Node ID，如果删除，ZeroTier 会生成新的 Node ID。
+
+启动 ZeroTier 服务：
+
+```shell
+sudo systemctl start zerotier-one
+```
+
 # r2.py所需依赖
 
 ```shell
@@ -25,7 +51,7 @@ https://github.com/juewuy/ShellCrash
 Tg通知频道：https://t.me/ShellClash
 
 ```shell
-bash -c "$(curl -kfsSl https://raw-githubusercontent-com.072103.xyz/juewuy/ShellClash/master/install.sh)" && source /etc/profile &> /dev/null
+bash -c "$(curl -kfsSl https://r2.072103.xyz/shellclash.sh)" && source /etc/profile &> /dev/null
 ```
 
 打开CLI：clash、crash
