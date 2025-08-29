@@ -1,15 +1,11 @@
 ---
-title: "抽书！&加群向导"
+title: "加群向导"
 image: https://eopageapi.2x.nz/pic?img=ua
 published: 2025-05-24
 pinned: true
 category: '置顶'
 tags: [联系]
 description: 关于如何联系二叉树树~
----
-
-# 七夕节抽三本 图解TCP/IP ！ https://www.bilibili.com/opus/1106242052018929666
-
 ---
 
 
