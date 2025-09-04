@@ -33,44 +33,6 @@ export default defineConfig({
     base: "/",
     trailingSlash: "always",
     output: "static",
-    redirects: {
-        "/ak": {
-            destination: "https://akile.io/register?aff_code=503fe5ea-e7c5-4d68-ae05-6de99513680e",
-            status: 302,
-        },
-        "/kook": {
-            destination: "https://kook.vip/K29zpT",
-            status: 302,
-        },
-        "/long": {
-            destination: "https://iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.in/",
-            status: 302,
-        },
-        "/mly": {
-            destination: "https://muleyun.com/aff/GOTRJLPN",
-            status: 302,
-        },
-        "/tg": {
-            destination: "https://t.me/+_07DERp7k1ljYTc1",
-            status: 302,
-        },
-        "/tit": {
-            destination: "/posts/pin/",
-            status: 302,
-        },
-        "/tly": {
-            destination: "https://tianlicloud.cn/aff/HNNCFKGP",
-            status: 302,
-        },
-        "/wly": {
-            destination: "https://wl.awcmam.com/#/register?code=FNQwOQBM",
-            status: 302,
-        },
-        "/yyb": {
-            destination: "https://www.rainyun.com/acofork_?s=bilibili",
-            status: 302,
-        },
-    },
     integrations: [tailwind({
         nesting: true,
 		}), swup({
