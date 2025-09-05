@@ -1,6 +1,6 @@
 ---
 title: 公开架构，我的二次元随机图API是怎么做的
-published: 2025-08-31T04:07:40
+published: 2025-09-06T02:22:00
 description: '发现很多小伙伴也想搭建一个自己的随机图API，这里我就公开一下我的架构，打磨2年了，供大家参考~'
 image: '../assets/images/2025-08-31-04-09-37-image.png'
 tags: [随机图API]
@@ -11,15 +11,21 @@ lang: ''
 
 # API端点
 
-门户： https://pic.072103.xyz
+~~门户： https://pic.072103.xyz~~
 
-门户里面的API端点： https://hpic.072103.xyz https://vpic.072103.xyz （CF Worker）
+~~门户里面的API端点： https://hpic.072103.xyz https://vpic.072103.xyz （CF Worker）~~
 
 博客用的API端点： https://eopageapi.2x.nz/pic?img=ua （EdgeOne Pages Functions）
 
-*什么？你问为什么这么乱？你先别急*
+# 新版实现
 
-# 详细实现
+图源存放在 cnb.cool ，如 https://cnb.cool/2x.nz/r3/-/git/raw/main/ri/h/1.webp 。分为横屏和竖屏随机图，统一重命名为 `数字.webp` ，如 `2333.webp` 。关于重命名插件的编写，可以参阅：[这里](/posts/rename/)
+
+EdgeOne Pages Functions作为入口，当收到请求后首先区分 横屏、竖屏、自适应，即 `?img=h` `?img=v` `?img=ua` ，然后内部随机出一个数字，最大值在代码中硬编码并且代理请求 https://cnb.cool/2x.nz/r3/-/git/raw/main/ri/h|v/*.webp ，其中，代理请求设置一个独特的 `Accept` 请求头来绕过防盗链。从而使客户端能得到正确的图片响应，关于更多详情，请参考源码： [EdgeOne_Function_PicAPI/functions/pic.js at main · afoim/EdgeOne_Function_PicAPI](https://github.com/afoim/EdgeOne_Function_PicAPI/blob/main/functions/pic.js)
+
+# 旧版实现
+
+> 在Cloudflare R2被刷了 **7千万次（GET）请求** 并且扣款 **28.08 USD（折合人民币 207.93 CNY）** 后废弃 
 
 图源全部存在 **Cloudflare R2**，全部采用 **Webp** 格式，仅分类为 **横屏、竖屏** ，如图
 
