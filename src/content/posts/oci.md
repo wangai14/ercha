@@ -106,6 +106,10 @@ lang: ''
 
 ![](../assets/images/2025-09-08-00-31-25-image.png)
 
+在这里可以更改IO配置，直接拉满即可
+
+![](../assets/images/2025-09-08-03-28-29-image.png)
+
 在这里可以更改SSH相关配置
 
 ![](../assets/images/2025-09-08-00-31-09-image.png)
