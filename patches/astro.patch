@@ -1,0 +1,13 @@
+diff --git a/dist/core/build/generate.js b/dist/core/build/generate.js
+index 3144f4c058b161b9e6eb3c8d891b743b34783653..907b9bc282b6f8f84f1ab19e7192eef5758d786c 100644
+--- a/dist/core/build/generate.js
++++ b/dist/core/build/generate.js
+@@ -91,7 +91,7 @@ ${bgGreen(black(` ${verb} static routes `))}`);
+ `)
+   );
+   const staticImageList = getStaticImageList();
+-  if (staticImageList.size) {
++  if (false && staticImageList.size) {
+     logger.info("SKIP_FORMAT", `${bgGreen(black(` generating optimized images `))}`);
+     const totalCount = Array.from(staticImageList.values()).map((x) => x.transforms.size).reduce((a, b) => a + b, 0);
+     const cpuCount = os.cpus().length;
