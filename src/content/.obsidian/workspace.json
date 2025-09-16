@@ -35,8 +35,7 @@
               "title": "obsidian"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,11 +183,11 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "ec09273f46b70a0b",
+  "active": "8fa774737350486e",
   "lastOpenFiles": [
+    "posts/obsidian.md",
     "posts/fuwari.md",
     "posts/pin.md",
-    "posts/obsidian.md",
     "assets/images/obsidian-9.png",
     "assets/images/obsidian-8.png",
     "assets/images/obsidian-7.png",
